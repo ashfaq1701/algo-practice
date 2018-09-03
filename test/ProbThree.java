@@ -73,6 +73,9 @@ class ProbThree {
 				}
 			}
 		}
+		if (target == null) {
+			return "IMPOSSIBLE";		
+		}
 		StringBuilder builder = new StringBuilder();
 		while (target.parent != null) {
 			if (target.operation != null) {
