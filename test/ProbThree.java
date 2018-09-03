@@ -83,7 +83,7 @@ class ProbThree {
 			}
 			target = target.parent;
 		}
-		return builder.toString();
+		return builder.reverse().toString();
 	}
 
 	public static void main(String args[]) {
