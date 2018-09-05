@@ -34,7 +34,7 @@ class ExpressionSolver {
 	public static int searchSequentially(StringBuilder str, String[] arr) {
 		for(String c : arr) {
 			int idx = str.indexOf(c);
-			if (idx != -1)
+			if (idx > 0)
 			{
 				return idx;
 			}
