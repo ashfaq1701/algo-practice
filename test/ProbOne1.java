@@ -9,8 +9,8 @@ class ProbOne1 {
 
                 int maxLength = 0;
                 int idx = 0;
+                int length = 0;
                 while(map.size() > 0) {
-                        int length = 0;
                         Integer val = map.get(idx);
                         if (val != null) {
                                 length++;
@@ -18,6 +18,7 @@ class ProbOne1 {
                                 idx = val;
                         } else {
                                 maxLength = Math.max(length, maxLength);
+                                length = 0;
                                 idx = (int) map.keySet().toArray()[0];
                         }
                 }
@@ -26,7 +27,7 @@ class ProbOne1 {
 
         public static void main (String args[]) {
                 int[] arr = {5, 7, 4, 1, 2, 3, 8, 0, 9, 6};
-                ProbOne probOne = new ProbOne();
+                ProbOne1 probOne = new ProbOne1();
                 int len = probOne.solution(arr);
                 System.out.println(len);
         }
